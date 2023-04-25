@@ -12,7 +12,7 @@
 
 Programa que funciona a traves del terminal de Java y que permite visualizar una base de datos existDB.
 
-Los libros son cargados en la BBDD mediante archivos XML que contienen nuestra información.
+Los elementos son libros que son cargados en la BBDD mediante archivos XML que contienen nuestra información.
 
 Tambien disponemos de métodos para realizar CRUD sobre nuestros libros.
 
