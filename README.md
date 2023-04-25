@@ -5,7 +5,7 @@
    <img src="https://img.shields.io/badge/Maven-5.4.4-blueviolet">
    </p>
    
-<h1 align="center"> EfemeridesDatabase </h1>
+<h1 align="center"> eXistSampleBooks </h1>
 
 
 
