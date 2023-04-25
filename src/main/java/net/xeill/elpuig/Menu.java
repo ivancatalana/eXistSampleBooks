@@ -10,22 +10,18 @@ import java.util.Scanner;
 
 public class Menu {
     // Atributos de la clase
-
     /**
      * Controlador de la base de datos Exist.
      */
     private ExistController existController;
-
     /**
      * Scanner para leer entrada de usuario.
      */
     private Scanner scanner;
-
     /**
      * Constructor de la clase Menu.
      * Crea una nueva instancia del controlador de Exist y del Scanner.
      */
-
     public Menu() {
         existController = new ExistController();
         scanner = new Scanner(System.in);
@@ -92,7 +88,6 @@ public class Menu {
         System.out.println("0. Exit");
         System.out.print("Select an option: ");
     }
-
     /**
      * Ejecuta una consulta de búsqueda de libros en la base de datos.
      * Permite al usuario seleccionar un campo de búsqueda y un valor a buscar.
@@ -220,5 +215,4 @@ public class Menu {
             e.printStackTrace();
         }
     }
-
 }

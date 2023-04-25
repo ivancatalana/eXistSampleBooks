@@ -3,15 +3,12 @@
  This class provides a connection to the eXist database and implements methods for executing queries,
  deleting, inserting, and updating books in the database.
  */
-
 package net.xeill.elpuig;
-
 import javax.xml.xquery.XQConnection;
 import javax.xml.xquery.XQDataSource;
 import javax.xml.xquery.XQException;
 import javax.xml.xquery.XQExpression;
 import javax.xml.xquery.XQResultSequence;
-
 import net.xqj.exist.ExistXQDataSource;
 import org.xmldb.api.DatabaseManager;
 import org.xmldb.api.base.*;
@@ -52,7 +49,6 @@ public class ExistController {
         executeCommand(query);
         System.out.println("All books with " + field + "='" + searchValue + "' deleted successfully!");
     }
-
     /**
      * Executes an XQuery expression and returns the result sequence.
      * @param query the XQuery expression to execute
@@ -69,7 +65,6 @@ public class ExistController {
             throw new RuntimeException(e);
         }
     }
-
     /**
      * Executes an XQuery command.
      * @param command the XQuery command to execute
@@ -87,7 +82,6 @@ public void executeCommand(String command) {
         e.printStackTrace();
     }
 }
-
     /**
      * Inserts a book into the database.
      * @param id the id of the book to insert
@@ -100,7 +94,6 @@ public void executeCommand(String command) {
     //------------------INsert Example---------------------------------------------------------
     //--------------------------------INsert Example-------------------------------------------
     //----------------------------------------------INsert Example-----------------------------
-
     public void insertBook(String id, String title, String author, String year) throws XQException {
         XQExpression xqe = connection.createExpression();
         String query = "update insert " +
@@ -114,9 +107,6 @@ public void executeCommand(String command) {
         xqe.executeCommand(query);
         System.out.println("Book inserted successfully!");
     }
-
-
-
     /**
      * Actualiza un libro en la base de datos.
      *
@@ -129,7 +119,6 @@ public void executeCommand(String command) {
     //-----------------UPDATE_BOOK-------------------------------------------
     //---------------------------------------------------------------------------
     //---------------------------------------------------------------------------
-
     public void updateBook(String id, String newTitle, String newAuthor, String newYear) throws XQException {
         XQExpression xqe = connection.createExpression();
         String query = "update replace " +
@@ -179,12 +168,10 @@ public void executeCommand(String command) {
             }
         }
     }
-
     /**
      Prints the result sequence of an XQuery expression to the console.
      @param xqrs The result sequence to print.
      */
-
     public void printResultSequence(XQResultSequence xqrs) {
         try {
             while (xqrs.next()) {
